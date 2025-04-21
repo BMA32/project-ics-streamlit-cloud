@@ -2,7 +2,7 @@ import streamlit as st
 #import plotly.express as px
 import pandas as pd
 import os
-import pycountry
+#import pycountry
 
 st.set_page_config(page_title="The Ideal Country Selector", page_icon="🌍",
                    #layout="wide"
