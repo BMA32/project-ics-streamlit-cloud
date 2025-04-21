@@ -54,7 +54,7 @@ st.write("")
 
 # Cost of Living
 st.subheader("💰 Cost of Living")
-cost_of_living_importance = st.slider("How important is the cost of living?", 0, 10, 5, key="cost_importance")
+cost_of_living_importance = st.slider("How important is the cost of living for you?", 0, 10, 5, key="cost_importance")
 max_monthly_budget = st.number_input(
     "Optional: Max Monthly Budget (in USD)", min_value=0, value=0, step=100
 )
