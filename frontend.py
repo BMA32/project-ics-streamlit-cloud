@@ -46,12 +46,12 @@ temperature_options = ["Cold", "Mild", "Hot"]
 climate_preference = st.select_slider(
     "Preferred Temperature", options=temperature_options, value="Mild"
 ).lower()
-climate_importance = st.slider("Importance", 0, 10, 5, key="climate_importance")
+climate_importance = st.slider("How important is climate to you?", 0, 10, 5, key="climate_importance")
 st.write("")
 
 # Cost of Living
 st.subheader("💰 Cost of Living")
-cost_of_living_importance = st.slider("Importance", 0, 10, 5, key="cost_importance")
+cost_of_living_importance = st.slider("How important is the cost of living?", 0, 10, 5, key="cost_importance")
 max_monthly_budget = st.number_input(
     "Optional: Max Monthly Budget (in USD)", min_value=0, value=0, step=100
 )
@@ -61,17 +61,17 @@ st.write("")
 
 # Healthcare
 st.subheader("🏥 Healthcare")
-healthcare_importance = st.slider("Importance", 0, 10, 5, key="health_importance")
+healthcare_importance = st.slider("How important is having good healthcare?", 0, 10, 5, key="health_importance")
 st.write("")
 
 # Safety
 st.subheader("🛡️ Safety")
-safety_importance = st.slider("Importance", 0, 10, 5, key="safety_importance")
+safety_importance = st.slider("How important is having a safe environment?", 0, 10, 5, key="safety_importance")
 st.write("")
 
 # Internet Speed
 st.subheader("🌐 Internet Speed")
-internet_speed_importance = st.slider("Importance", 0, 10, 5, key="internet_importance")
+internet_speed_importance = st.slider("How important is having a fast internet speed?", 0, 10, 5, key="internet_importance")
 st.write("")
 
 # --- API Call and Results ---
