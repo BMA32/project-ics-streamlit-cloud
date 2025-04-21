@@ -12,6 +12,7 @@ The frontend displays:
     - Importance rating sliders for each factor
     - Optional maximum monthly budget input
     - Results section showing the top matching countries with scores
+    - About page explaining the project
 """
 
 import streamlit as st
@@ -39,7 +40,7 @@ continent_options = {
     "Any": None, "Africa": "AF", "Asia": "AS", "Europe": "EU",
     "North America": "NA", "Oceania": "OC", "South America": "SA"
 }
-continent_key = st.selectbox("Select Continent", options=list(continent_options.keys()), index=0)
+continent_key = st.selectbox("Select a continent or leave the default filter and be amazed", options=list(continent_options.keys()), index=0)
 selected_continent = continent_options[continent_key]
 st.write("")
 
@@ -106,11 +107,11 @@ if st.button("🎯 Find My Ideal Country", use_container_width=True):
         if isinstance(results, list) and results:
             # Define feature keys expected from API and their display labels/icons
             feature_display_map = {
+                'average_yearly_temperature': '🌡️ Climate',
                 'average_monthly_cost_$': '💰 Cost of Living',
-                'average_yearly_temperature': '🌡️ Temperature',
-                'internet_speed_mbps': '🌐 Internet Speed',
+                'Healthcare Index': '🏥 Healthcare',
                 'safety_index': '🛡️ Safety',
-                'Healthcare Index': '🏥 Healthcare'
+                'internet_speed_mbps': '🌐 Internet Speed'
             }
 
             for i, country_data in enumerate(results, 1):
@@ -124,7 +125,7 @@ if st.button("🎯 Find My Ideal Country", use_container_width=True):
 
                 expander_title = f"#{i} {country_name} - Overall Match: {overall_score_percent:.0f}%"
                 with st.expander(expander_title, expanded=(i <= 1)): # Expand top 3
-                    st.markdown("**Overall Match score:**")
+                    st.markdown("**Overall Match Score:**")
                     st.progress(float(overall_score or 0))
                     st.markdown("**Detailed Scores:**")
 
