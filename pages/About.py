@@ -88,7 +88,7 @@ st.title("About 'The Ideal Country Selector'")
 st.markdown("""
 ## 🌎 Project Overview
 
-**'The Ideal Country Selector'** is a personalized recommendation engine designed to help you find your dream country based on your preferences (0 = Not important at all, and 10 = Extremely important).
+**'The Ideal Country Selector'** is a personalized recommendation engine designed to help you find your dream country based on your preferences (0 = Not important at all | 10 = Extremely important).
 
 Created by students of the Le Wagon Data Science & AI bootcamp, this project was born from a simple question: with so many amazing places in the world, how do you find the perfect match for your lifestyle?
 

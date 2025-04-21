@@ -25,6 +25,9 @@ API_BASE_URL = os.getenv("API_URL", "https://project-ics-210911899890.europe-wes
 RECOMMEND_ENDPOINT_URL = f"{API_BASE_URL}/recommend-countries"
 
 # --- UI Setup ---
+st.set_page_config(page_title="The Ideal Country Selector", page_icon="🌍",
+                   #layout="wide"
+                   )
 st.title("🌍 Find Your Dream Country to Live!")
 st.write("")
 
@@ -41,10 +44,10 @@ selected_continent = continent_options[continent_key]
 st.write("")
 
 # Climate / Temperature
-st.subheader("🌡️ Climate / Temperature")
+st.subheader("🌡️ Climate")
 temperature_options = ["Cold", "Mild", "Hot"]
 climate_preference = st.select_slider(
-    "Preferred Temperature", options=temperature_options, value="Mild"
+    "Choose the climate you prefer", options=temperature_options, value="Mild"
 ).lower()
 climate_importance = st.slider("How important is climate to you?", 0, 10, 5, key="climate_importance")
 st.write("")
