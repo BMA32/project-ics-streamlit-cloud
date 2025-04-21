@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import pycountry
 
-st.set_page_config(page_title="Where Should I Live?", page_icon="🌍",
+st.set_page_config(page_title="The Ideal Country Selector", page_icon="🌍",
                    #layout="wide"
                    )
 
@@ -82,13 +82,13 @@ def get_countries_data():
         return pd.DataFrame(columns=['country', 'iso_alpha_3'])
 
 # Page title
-st.title("About 'Where Should I Live?'")
+st.title("About 'The Ideal Country Selector'")
 
 # Project Description
 st.markdown("""
 ## 🌎 Project Overview
 
-**'Where Should I Live?'** is a personalized recommendation engine designed to help you find your dream country based on your preferences.
+**'The Ideal Country Selector'** is a personalized recommendation engine designed to help you find your dream country based on your preferences.
 
 Created by students of the Le Wagon Data Science & AI bootcamp, this project was born from a simple question: with so many amazing places in the world, how do you find the perfect match for your lifestyle?
 
@@ -109,29 +109,29 @@ Our database includes comprehensive information on **152 countries** worldwide, 
 """)
 
 # Interactive Map
-st.markdown("## 🗺️ Countries in Our Database")
+#st.markdown("## 🗺️ Countries in Our Database")
 
 # Get the real country data
-countries_df = get_countries_data()
+#countries_df = get_countries_data()
 
 # Create the Choropleth map with Plotly
-fig = px.choropleth(
-    countries_df,
-    locations="iso_alpha_3",
-    color_discrete_sequence=["green"],
-    hover_name="country",
-    title="Countries Included in Our Database"
-)
+#fig = px.choropleth(
+#    countries_df,
+#    locations="iso_alpha_3",
+#    color_discrete_sequence=["green"],
+#    hover_name="country",
+#    title="Countries Included in Our Database"
+#)
 
-fig.update_layout(
-    geo=dict(
-        showframe=False,
-        showcoastlines=True,
-        projection_type='natural earth'
-    )
-)
+#fig.update_layout(
+#    geo=dict(
+#        showframe=False,
+#        showcoastlines=True,
+#        projection_type='natural earth'
+#    )
+#)
 
-st.plotly_chart(fig, use_container_width=True)
+#st.plotly_chart(fig, use_container_width=True)
 
 
 # Additional Info
@@ -143,4 +143,4 @@ This project was created by students of the Le Wagon Data Science & AI bootcamp 
 
 # Footer
 st.markdown("---")
-st.markdown("© 2025 Where Should I Live")
+st.markdown("© 2025 The Ideal Country Selector")

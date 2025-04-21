@@ -61,17 +61,17 @@ st.write("")
 
 # Healthcare
 st.subheader("🏥 Healthcare")
-healthcare_importance = st.slider("How important is having good healthcare?", 0, 10, 5, key="health_importance")
+healthcare_importance = st.slider("How much do you value good healthcare?", 0, 10, 5, key="health_importance")
 st.write("")
 
 # Safety
 st.subheader("🛡️ Safety")
-safety_importance = st.slider("How important is having a safe environment?", 0, 10, 5, key="safety_importance")
+safety_importance = st.slider("How important is safety for you?", 0, 10, 5, key="safety_importance")
 st.write("")
 
 # Internet Speed
 st.subheader("🌐 Internet Speed")
-internet_speed_importance = st.slider("How important is having a fast internet speed?", 0, 10, 5, key="internet_importance")
+internet_speed_importance = st.slider("How important is fast internet speed for you?", 0, 10, 5, key="internet_importance")
 st.write("")
 
 # --- API Call and Results ---
