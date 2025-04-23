@@ -101,7 +101,7 @@ We analyze your preferences across several key factors:
 - 🛡️ Safety metrics
 - 🌐 Internet connectivity
 
-Then we match you with countries that best fit your unique requirements, using real-world data from reliable sources.
+Then we match you with countries that best fit your unique requirements, using real-world data from reliable sources (special thanks to Numbeo and Kaggle).
 
 ## 📊 Our Data
 

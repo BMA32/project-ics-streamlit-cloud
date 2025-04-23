@@ -29,7 +29,7 @@ RECOMMEND_ENDPOINT_URL = f"{API_BASE_URL}/recommend-countries"
 st.set_page_config(page_title="The Ideal Country Selector", page_icon="🌍",
                    #layout="wide"
                    )
-st.title("🌍 Find Your Dream Country to Live!")
+st.title("🌍 Find Your Dream Country!")
 st.write("")
 
 # --- User Inputs ---
